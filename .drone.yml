@@ -1,6 +1,5 @@
 workspace:
   base: /go
-  path: src/github.com/drone-plugins/drone-npm
 
 pipeline:
   test:
@@ -11,10 +10,7 @@ pipeline:
       - go vet
       - go test -cover -coverprofile=coverage.out
       - go build -ldflags "-s -w -X main.build=$DRONE_BUILD_NUMBER"
-  coverage:
-    when:
-      branch: master
-      event: push
+
   latest:
     image: docker
     storage_driver: overlay
@@ -23,6 +19,7 @@ pipeline:
     when:
       branch: master
       event: push
+
   develop:
     image: docker
     storage_driver: overlay
