@@ -1,0 +1,9 @@
+vendors:
+- path: github.com/Sirupsen/logrus
+  rev: a283a10442df8dc09befd873fab202bf8a253d6a
+- path: github.com/joho/godotenv
+  rev: 4ed13390c0acd2ff4e371e64d8b97c8954138243
+- path: github.com/urfave/cli
+  rev: 11c134509d89c2018675f369955218a180dc7428
+- path: golang.org/x/sys
+  rev: a646d33e2ee3172a661fc09bca23bb4889a41bc8
